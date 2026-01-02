@@ -10,7 +10,7 @@ r = redis.Redis(host=redis_host, port=6379, decode_responses=True)
 @app.route("/")
 def hello():
     count = r.incr("counter")
-    return f"Hello from Flask + Redis! Visits: {count}\n"
+    return f"Hello from CI/CD pipeline! Visits: {count}\n"
 
 @app.route("/health")
 def health():
